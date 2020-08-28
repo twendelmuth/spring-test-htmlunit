@@ -1,0 +1,14 @@
+# ignore Eclipse IDE metadata files
+/.settings/
+/build
+/.gradle
+/bin/
+/.project
+/.classpath
+/dreams_api/.project
+
+# ignore Intellij IDEA metadata files
+.idea/*
+out/**
+*/out/**
+*.iml
