@@ -7,6 +7,8 @@
  */
 
 plugins {
+	id 'org.springframework.boot' version '2.3.3.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
     // Apply the java-library plugin to add support for Java Library
     id 'java-library'
     id 'java'
@@ -21,7 +23,10 @@ repositories {
 
 dependencies {
 
-	api group: 'org.springframework', name: 'spring-webmvc', version: '5.2.6.RELEASE'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
 	
 	testImplementation group: 'org.springframework', name: 'spring-test', version: '5.2.6.RELEASE'	
 	testImplementation group: 'org.seleniumhq.selenium', name: 'htmlunit-driver', version: '2.43.1'
